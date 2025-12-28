@@ -24,8 +24,8 @@
 //    priceCent :799
 // }];
 let producthtml = '';
-products.forEach((product) =>{
-          producthtml = producthtml +` <div class="product-container">
+products.forEach((product) => {
+    producthtml = producthtml + ` <div class="product-container">
           <div class="product-image-container">
             <img class="product-image"
               src="${product.image}">
@@ -37,14 +37,14 @@ products.forEach((product) =>{
 
           <div class="product-rating-container">
             <img class="product-rating-stars"
-              src="images/ratings/rating-${product.rating.stars *10}.png">
+              src="images/ratings/rating-${product.rating.stars * 10}.png">
             <div class="product-rating-count link-primary">
               ${product.rating.number}
             </div>
           </div>
 
           <div class="product-price">
-            $${(product.priceCents /100).toFixed(2)}
+            $${(product.priceCents / 100).toFixed(2)}
           </div>
 
           <div class="product-quantity-container">
@@ -69,9 +69,34 @@ products.forEach((product) =>{
             Added
           </div>
 
-          <button class="add-to-cart-button button-primary">
+          <button class="add-to-cart-button button-primary js-add-cart" data-product-id ="${product.id}" >
             Add to Cart
           </button>
-        </div>`;     
+        </div>`;
 });
 document.querySelector('.js-grid-html').innerHTML = producthtml;
+
+document.querySelectorAll('.js-add-cart')
+    .forEach((button) => {
+        button.addEventListener('click', () => {
+            const productId = button.dataset.productId;
+
+            let matching ;
+            cart.forEach((element) => {
+                if (element.productId === productId) {
+                    matching = element;
+                }
+            });
+            if (matching) {
+                matching.number +=1;
+            }
+            else {
+                cart.push({
+                    productId: productId,
+                    number: 1
+                });
+            }
+            console.log(cart);
+        });
+    });
+
