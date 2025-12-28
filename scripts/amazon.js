@@ -1,30 +1,30 @@
-const infoOfData = [{
-    image : 'images/products/athletic-cotton-socks-6-pairs.jpg',
-    productname : 'Black and Gray Athletic Cotton Socks - 6 Pairs',
-    rating : {
-        stars : 4.5,
-        number: 87
-    },
-    priceCent : 1090
-},{
-    image : 'images/products/intermediate-composite-basketball.jpg',
-    productname : 'Intermediate Size Basketball',
-    rating : {
-        stars : 4,
-        number : 127
-    },
-    priceCent : 2095
-},{
-   image : 'images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg' ,
-   productname : 'Adults Plain Cotton T-Shirt - 2 Pack',
-   rating :{
-    stars : 4.5,
-    number : 56
-   },
-   priceCent :799
-}];
+// const products = [{
+//     image : 'images/products/athletic-cotton-socks-6-pairs.jpg',
+//     productname : 'Black and Gray Athletic Cotton Socks - 6 Pairs',
+//     rating : {
+//         stars : 4.5,
+//         number: 87
+//     },
+//     priceCent : 1090
+// },{
+//     image : 'images/products/intermediate-composite-basketball.jpg',
+//     productname : 'Intermediate Size Basketball',
+//     rating : {
+//         stars : 4,
+//         number : 127
+//     },
+//     priceCent : 2095
+// },{
+//    image : 'images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg' ,
+//    productname : 'Adults Plain Cotton T-Shirt - 2 Pack',
+//    rating :{
+//     stars : 4.5,
+//     number : 56
+//    },
+//    priceCent :799
+// }];
 let producthtml = '';
-infoOfData.forEach((product) =>{
+products.forEach((product) =>{
           producthtml = producthtml +` <div class="product-container">
           <div class="product-image-container">
             <img class="product-image"
