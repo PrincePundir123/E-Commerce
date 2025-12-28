@@ -1,3 +1,5 @@
+import {cart} from '../scripts/cart.js';
+import {products} from '../data/products.js';
 // const products = [{
 //     image : 'images/products/athletic-cotton-socks-6-pairs.jpg',
 //     productname : 'Black and Gray Athletic Cotton Socks - 6 Pairs',
