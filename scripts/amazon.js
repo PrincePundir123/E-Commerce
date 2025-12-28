@@ -81,22 +81,29 @@ document.querySelectorAll('.js-add-cart')
         button.addEventListener('click', () => {
             const productId = button.dataset.productId;
 
-            let matching ;
+            let matching;
             cart.forEach((element) => {
                 if (element.productId === productId) {
                     matching = element;
                 }
             });
             if (matching) {
-                matching.number +=1;
+                matching.number += 1;
             }
             else {
                 cart.push({
                     productId: productId,
                     number: 1
                 });
+
             }
-            console.log(cart);
+            let cartquantity = 0;
+            cart.forEach((element) => {
+                cartquantity += element.number;
+            });
+            document.querySelector('.cart-quantity').innerHTML=cartquantity;
+            console.log(cartquantity);
         });
     });
+
 
