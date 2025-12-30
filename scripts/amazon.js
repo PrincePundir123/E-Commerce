@@ -1,5 +1,6 @@
 import {cart} from '../scripts/cart.js';
 import {products} from '../data/products.js';
+import {formatMoney} from './utils/money.js';
 // const products = [{
 //     image : 'images/products/athletic-cotton-socks-6-pairs.jpg',
 //     productname : 'Black and Gray Athletic Cotton Socks - 6 Pairs',
@@ -46,7 +47,7 @@ products.forEach((product) => {
           </div>
 
           <div class="product-price">
-            $${(product.priceCents / 100).toFixed(2)}
+            $${formatMoney(product.priceCents)}
           </div>
 
           <div class="product-quantity-container">

@@ -1,12 +1,17 @@
 import { products } from '../data/products.js';
 import { cart } from '../scripts/cart.js';
-
+import {formatMoney} from './utils/money.js';
 let checkouthtml = '';
+let matchingProduct;
 
 cart.forEach((cartItem, index) => {
-  const matchingProduct = products.find(
-    product => product.id === cartItem.productId
-  );
+
+  // find matching product
+  products.forEach((product) => {
+    if (product.id === cartItem.productId) {
+      matchingProduct = product;
+    }
+  });
 
   if (!matchingProduct) return;
 
@@ -25,7 +30,7 @@ cart.forEach((cartItem, index) => {
             ${matchingProduct.name}
           </div>
           <div class="product-price">
-            $${(matchingProduct.priceCents / 100).toFixed(2)}
+            $${formatMoney(matchingProduct.priceCents)}
           </div>
           <div class="product-quantity">
             <span>
@@ -94,3 +99,52 @@ cart.forEach((cartItem, index) => {
 });
 
 document.querySelector('.js-html-insert').innerHTML = checkouthtml;
+
+//  let totalitem =0 ; 
+// cart.forEach((item) =>{
+//     totalitem += item.number;
+// });
+// let totalamount =0;
+// products.forEach((item) =>{
+//     product.priceCents /100;
+// });
+// const ShippingAndHandling =4.00;
+// let beforeAmount = totalamount+ ShippingAndHandling;
+// let tax= beforeAmount * 0.1;
+// let orderTotal = tax +beforeAmount;
+//           const paymenthtml =`<div class="payment-summary">
+//           <div class="payment-summary-title">
+//             Order Summary
+//           </div>
+
+//           <div class="payment-summary-row">
+//             <div>Items (${totalitem}):</div>
+//             <div class="payment-summary-money">$${totalamount}</div>
+//           </div>
+
+//           <div class="payment-summary-row">
+//             <div>Shipping &amp; handling:</div>
+//             <div class="payment-summary-money">$${ShippingAndHandling}</div>
+//           </div>
+
+//           <div class="payment-summary-row subtotal-row">
+//             <div>Total before tax:</div>
+//             <div class="payment-summary-money">${beforeAmount}</div>
+//           </div>
+
+//           <div class="payment-summary-row">
+//             <div>Estimated tax (10%):</div>
+//             <div class="payment-summary-money">$${tax}</div>
+//           </div>
+
+//           <div class="payment-summary-row total-row">
+//             <div>Order total:</div>
+//             <div class="payment-summary-money">$${orderTotal}</div>
+//           </div>
+
+//           <button class="place-order-button button-primary">
+//             Place your order
+//           </button>
+//         </div>`;
+//         document.querySelector('.payment-summary').innerHTML = paymenthtml;
+    
