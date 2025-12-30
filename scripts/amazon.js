@@ -99,6 +99,7 @@ document.querySelectorAll('.js-add-cart')
                 });
 
             }
+           
             let cartquantity = 0;
             cart.forEach((element) => {
                 cartquantity += element.number;
