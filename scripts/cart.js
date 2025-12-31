@@ -1,4 +1,4 @@
-export const cart =[{
+export let cart =[{
    productId : "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
    number: 2
 },{
@@ -9,3 +9,14 @@ export const cart =[{
     number:1
 }];
 
+// function to remove cart
+export function toremovecart(productId){
+   const newcart =[];
+   cart.forEach((item) =>{
+   if(item.productId !== productId){
+    newcart.push(item);
+   }
+   }); 
+   cart = newcart;
+   
+}
