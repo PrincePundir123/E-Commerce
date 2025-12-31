@@ -1,6 +1,8 @@
-import {cart} from '../scripts/cart.js';
+import {cart,addToCart} from '../scripts/cart.js';
+import {saveToStorage} from '../scripts/cart.js';
 import {products} from '../data/products.js';
 import {formatMoney} from './utils/money.js';
+
 // const products = [{
 //     image : 'images/products/athletic-cotton-socks-6-pairs.jpg',
 //     productname : 'Black and Gray Athletic Cotton Socks - 6 Pairs',
@@ -83,24 +85,7 @@ document.querySelectorAll('.js-add-cart')
     .forEach((button) => {
         button.addEventListener('click', () => {
             const productId = button.dataset.productId;
-
-            let matching;
-            cart.forEach((element) => {
-                if (element.productId === productId) {
-                    matching = element;
-                }
-            });
-            if (matching) {
-                matching.number += 1;
-            }
-            else {
-                cart.push({
-                    productId: productId,
-                    number: 1
-                });
-
-            }
-           
+            addToCart (productId);
             let cartquantity = 0;
             cart.forEach((element) => {
                 cartquantity += element.number;
