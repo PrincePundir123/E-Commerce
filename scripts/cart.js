@@ -8,7 +8,6 @@ export let cart =[{
     productId:"54e0eccd-8f36-462b-b68a-8182611d9add",
     number:1
 }];
-
 // function to remove cart
 export function toremovecart(productId){
    const newcart =[];
