@@ -151,25 +151,6 @@ export const products = [
     ]
   },
   {
-    id: "5968897c-4d27-4872-89f6-5bcb052746d7",
-    image: "images/products/women-chiffon-beachwear-coverup-black.jpg",
-    name: "Women's Chiffon Beachwear Cover Up - Black",
-    rating: {
-      stars: 4.5,
-      count: 235
-    },
-    priceCents: 2070,
-    keywords: [
-      "robe",
-      "swimsuit",
-      "swimming",
-      "bathing",
-      "apparel"
-    ],
-    type: "clothing",
-    sizeChartLink: "images/clothing-size-chart.png"
-  },
-  {
     id: "aad29d11-ea98-41ee-9285-b916638cac4a",
     image: "images/products/round-sunglasses-black.jpg",
     name: "Round Sunglasses",
@@ -181,23 +162,6 @@ export const products = [
     keywords: [
       "accessories",
       "shades"
-    ]
-  },
-  {
-    id: "04701903-bc79-49c6-bc11-1af7e3651358",
-    image: "images/products/women-beach-sandals.jpg",
-    name: "Women's Two Strap Buckle Sandals - Tan",
-    rating: {
-      stars: 4.5,
-      count: 562
-    },
-    priceCents: 2499,
-    keywords: [
-      "footwear",
-      "sandals",
-      "womens",
-      "beach",
-      "summer"
     ]
   },
   {
@@ -213,21 +177,6 @@ export const products = [
       "bedroom",
       "curtains",
       "home"
-    ]
-  },
-  {
-    id: "82bb68d7-ebc9-476a-989c-c78a40ee5cd9",
-    image: "images/products/men-slim-fit-summer-shorts-gray.jpg",
-    name: "Men's Slim-Fit Summer Shorts",
-    rating: {
-      stars: 4,
-      count: 160
-    },
-    priceCents: 1699,
-    keywords: [
-      "shorts",
-      "apparel",
-      "mens"
     ]
   },
   {
@@ -263,56 +212,6 @@ export const products = [
     ]
   },
   {
-    id: "a82c6bac-3067-4e68-a5ba-d827ac0be010",
-    image: "images/products/straw-sunhat.webp",
-    name: "Straw Lifeguard Sun Hat",
-    rating: {
-      stars: 4,
-      count: 215
-    },
-    priceCents: 2200,
-    keywords: [
-      "hats",
-      "straw hats",
-      "summer",
-      "apparel"
-    ]
-  },
-  {
-    id: "e4f64a65-1377-42bc-89a5-e572d19252e2",
-    image: "images/products/sky-flower-stud-earrings.webp",
-    name: "Sterling Silver Sky Flower Stud Earrings",
-    rating: {
-      stars: 4.5,
-      count: 52
-    },
-    priceCents: 1799,
-    keywords: [
-      "jewelry",
-      "accessories",
-      "womens"
-    ]
-  },
-  {
-    id: "b0f17cc5-8b40-4ca5-9142-b61fe3d98c85",
-    image: "images/products/women-stretch-popover-hoodie-black.jpg",
-    name: "Women's Stretch Popover Hoodie",
-    rating: {
-      stars: 4.5,
-      count: 2465
-    },
-    priceCents: 1374,
-    keywords: [
-      "hooded",
-      "hoodies",
-      "sweaters",
-      "womens",
-      "apparel"
-    ],
-    type: "clothing",
-    sizeChartLink: "images/clothing-size-chart.png"
-  },
-  {
     id: "a93a101d-79ef-4cf3-a6cf-6dbe532a1b4a",
     image: "images/products/bathroom-rug.jpg",
     name: "Bathroom Bath Rug Mat 20 x 31 Inch - Grey",
@@ -325,56 +224,6 @@ export const products = [
       "bathmat",
       "bathroom",
       "home"
-    ]
-  },
-  {
-    id: "4f4fbcc2-4e72-45cc-935c-9e13d79cc57f",
-    image: "images/products/women-knit-ballet-flat-black.jpg",
-    name: "Women's Knit Ballet Flat",
-    rating: {
-      stars: 4,
-      count: 326
-    },
-    priceCents: 2640,
-    keywords: [
-      "shoes",
-      "flats",
-      "womens",
-      "footwear"
-    ]
-  },
-  {
-    id: "8b5a2ee1-6055-422a-a666-b34ba28b76d4",
-    image: "images/products/men-golf-polo-t-shirt-blue.jpg",
-    name: "Men's Regular-Fit Quick-Dry Golf Polo Shirt",
-    rating: {
-      stars: 4.5,
-      count: 2556
-    },
-    priceCents: 1599,
-    keywords: [
-      "tshirts",
-      "shirts",
-      "apparel",
-      "mens"
-    ],
-    type: "clothing",
-    sizeChartLink: "images/clothing-size-chart.png"
-  },
-  {
-    id: "b86ddc8b-3501-4b17-9889-a3bad6fb585f",
-    image: "images/products/trash-can-with-foot-pedal-50-liter.jpg",
-    name: "Trash Can with Foot Pedal - Brushed Stainless Steel",
-    rating: {
-      stars: 4.5,
-      count: 2286
-    },
-    priceCents: 8300,
-    keywords: [
-      "garbage",
-      "bins",
-      "cans",
-      "kitchen"
     ]
   },
   {
@@ -392,24 +241,6 @@ export const products = [
       "sheets",
       "covers",
       "home"
-    ]
-  },
-  {
-    id: "d2785924-743d-49b3-8f03-ec258e640503",
-    image: "images/products/women-chunky-beanie-gray.webp",
-    name: "Women's Chunky Cable Beanie - Gray",
-    rating: {
-      stars: 5,
-      count: 83
-    },
-    priceCents: 1250,
-    keywords: [
-      "hats",
-      "winter hats",
-      "beanies",
-      "tuques",
-      "apparel",
-      "womens"
     ]
   },
   {
@@ -444,36 +275,6 @@ export const products = [
     ]
   },
   {
-    id: "4df68c27-fd59-4a6a-bbd1-e754ddb6d53c",
-    image: "images/products/men-navigator-sunglasses-brown.jpg",
-    name: "Men's Navigator Sunglasses Pilot",
-    rating: {
-      stars: 3.5,
-      count: 42
-    },
-    priceCents: 1690,
-    keywords: [
-      "sunglasses",
-      "glasses",
-      "accessories",
-      "shades"
-    ]
-  },
-  {
-    id: "4e37dd03-3b23-4bc6-9ff8-44e112a92c64",
-    image: "images/products/non-stick-cooking-set-15-pieces.webp",
-    name: "Non-Stick Cookware Set, Pots, Pans and Utensils - 15 Pieces",
-    rating: {
-      stars: 4.5,
-      count: 511
-    },
-    priceCents: 6797,
-    keywords: [
-      "cooking set",
-      "kitchen"
-    ]
-  },
-  {
     id: "a434b69f-1bc1-482d-9ce7-cd7f4a66ce8d",
     image: "images/products/vanity-mirror-silver.jpg",
     name: "Vanity Mirror with Heavy Base - Chrome",
@@ -487,23 +288,6 @@ export const products = [
       "washroom",
       "mirrors",
       "home"
-    ]
-  },
-  {
-    id: "a45cfa0a-66d6-4dc7-9475-e2b01595f7d7",
-    image: "images/products/women-french-terry-fleece-jogger-camo.jpg",
-    name: "Women's Fleece Jogger Sweatpant",
-    rating: {
-      stars: 4.5,
-      count: 248
-    },
-    priceCents: 2400,
-    keywords: [
-      "pants",
-      "sweatpants",
-      "jogging",
-      "apparel",
-      "womens"
     ]
   },
   {
