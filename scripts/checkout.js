@@ -3,8 +3,8 @@ import { toremovecart,updateDeliveryOption,cart } from '../scripts/cart.js';
 import {formatMoney} from './utils/money.js';
 import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
 import  {deliverycarts}  from '../scripts/deliverycart.js';
+function renderOrder(){
 let checkouthtml = '';
-
 cart.forEach((cartItem, index) => {
   let matchingProduct;
   // find matching product
@@ -121,5 +121,8 @@ document.querySelectorAll('.js-delivery-option')
     // const deliveryId = element.dataset.deliveryId;
     const {productId,deliveryId} = element.dataset;
     updateDeliveryOption(productId,deliveryId);
+    renderOrder();
   });
 });
+}
+renderOrder();
