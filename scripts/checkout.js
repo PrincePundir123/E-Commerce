@@ -1,6 +1,5 @@
 import { products } from '../data/products.js';
-import { cart} from '../scripts/cart.js';
-import { toremovecart } from '../scripts/cart.js';
+import { toremovecart,updateDeliveryOption,cart } from '../scripts/cart.js';
 import {formatMoney} from './utils/money.js';
 import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
 import  {deliverycarts}  from '../scripts/deliverycart.js';
@@ -90,15 +89,19 @@ const deliveryDateName = deliveryDate.format('dddd ,MMMM D');
 const dlpriceCent = deliveryItems.deliveryPriceCents===0
           ?'FREE'
           :`$${formatMoney(deliveryItems.deliveryPriceCents)} -`;
-const ischeck =deliveryItems.deliveryid === cartItem.deliveryId;
+ const ischeck =deliveryItems.deliveryId === cartItem.deliveryId;
     jshtml +=`
        
-          <div class="delivery-option">
-            <input type="radio" 
-            ${ischeck ? 'checked' : ''}
-              class="delivery-option-input"
-              name="delivery-option-${matchingProduct.id}"
-              >
+          <div class="delivery-option  js-delivery-option"
+          data-product-id= "${matchingProduct.id}"
+          data-delivery-id="${deliveryItems.deliveryId}"
+          >
+           <input type="radio"  
+          ${ischeck ? 'checked' : ''}
+          class="delivery-option-input"
+          name="delivery-option-${matchingProduct.id}"
+          data-delivery-id="${deliveryItems.deliveryId}">
+
             <div>
               <div class="delivery-option-date">
                 ${deliveryDateName}
@@ -111,3 +114,12 @@ const ischeck =deliveryItems.deliveryid === cartItem.deliveryId;
 });
 return jshtml;
 }
+document.querySelectorAll('.js-delivery-option')
+.forEach((element) =>{
+  element.addEventListener('click',()=>{
+    // const productId = element.dataset.productId;
+    // const deliveryId = element.dataset.deliveryId;
+    const {productId,deliveryId} = element.dataset;
+    updateDeliveryOption(productId,deliveryId);
+  });
+});
