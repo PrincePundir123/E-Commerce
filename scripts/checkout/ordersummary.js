@@ -64,6 +64,7 @@ cart.forEach((cartItem, index) => {
         const container = document.querySelector(`.js-delete-${productId}`);
         //  console.log(container);
         container.remove();
+        renderPaymentSummary();
       });
     });
   function deliveryHtml(matchingProduct, cartItem) {
