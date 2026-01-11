@@ -74,7 +74,7 @@ cart.forEach((cartItem, index) => {
       const deliveryDate = today.add(deliveryItems.deliveryDays, 'days');
       const deliveryDateName = deliveryDate.format('dddd ,MMMM D');
       const dlpriceCent = deliveryItems.deliveryPriceCents === 0
-        ? 'FREE'
+        ? 'FREE  '
         : `$${formatMoney(deliveryItems.deliveryPriceCents)} -`;
       const ischeck = deliveryItems.deliveryId === cartItem.deliveryId;
       jshtml += `
