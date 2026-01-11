@@ -1,6 +1,6 @@
 import { formatMoney } from "../scripts/utils/money.js"; 
  
-console.log("test suite");
+console.log("test suite :formatMoney");
 
 console.log("test cse one");
 

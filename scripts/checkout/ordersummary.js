@@ -63,7 +63,7 @@ cart.forEach((cartItem, index) => {
         toremovecart(productId);
         const container = document.querySelector(`.js-delete-${productId}`);
         //  console.log(container);
-        container.remove();
+        container.remove(); 
         renderPaymentSummary();
       });
     });
