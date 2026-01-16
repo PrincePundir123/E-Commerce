@@ -16,8 +16,10 @@ cart.forEach((cartItem, index) => {
     const deliveryDateName = deliveryDate.format('dddd, MMMM D');
     if (!matchingProduct) return;
     checkouthtml += `
-    <div class="cart-item-container js-delete-${matchingProduct.id}">
-      <div class="delivery-date">
+    <div class="cart-item-container
+    js-cart-item-test
+    js-delete-${matchingProduct.id}">
+      <div class="delivery-date ">
         Delivery date: ${deliveryDateName}
       </div>
       <div class="cart-item-details-grid">
@@ -31,7 +33,8 @@ cart.forEach((cartItem, index) => {
           <div class="product-price">
             $${formatMoney(matchingProduct.priceCents)}
           </div>
-          <div class="product-quantity">
+          <div class="product-quantity
+          ">
             <span>
               Quantity:
               <span class="quantity-label">${cartItem.number}</span>
@@ -39,12 +42,12 @@ cart.forEach((cartItem, index) => {
             <span class="update-quantity-link link-primary">
               Update
             </span>
-            <span class="delete-quantity-link link-primary js-delete-link" data-product-id="${matchingProduct.id}">
+            <span class="delete-quantity-link link-primary js-delete-link js-delete-link-${matchingProduct.id}" data-product-id="${matchingProduct.id}">
               Delete
             </span>
           </div>
         </div>
-        <div class="delivery-options">
+        <div class="delivery-options js-delivery-options-${cartItem.productId}">
                 <div class="delivery-options-title">
                   Choose a delivery option:
                 </div>
