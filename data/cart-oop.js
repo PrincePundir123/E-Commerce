@@ -2,6 +2,7 @@ console.log("hello");
 function Cart(localStorageKey){
 const cart ={
     cartItem: undefined,
+    
     loadToStorage() {
     this.cartItem = JSON.parse(localStorage.getItem(localStorageKey));
     if (!this.cartItem) {

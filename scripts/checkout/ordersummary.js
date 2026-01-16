@@ -1,5 +1,5 @@
 import { getProduct,products } from '../../data/products.js';
-import { toremovecart, updateDeliveryOption, cart } from '../cart.js';
+import { toremovecart, updateDeliveryOption,cart} from '../../data/cart.js';
 import { formatMoney } from '../utils/money.js';
 import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
 import { renderPaymentSummary } from './paymentsummary.js';
