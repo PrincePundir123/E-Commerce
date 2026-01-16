@@ -1,14 +1,17 @@
 class Cart {
     cartItem;
-    localStorageKey ;
+
+    // private property
+    #localStorageKey ;
 
     constructor(localStorageKey) {
-        this.localStorageKey = localStorageKey;
+        this.#localStorageKey = localStorageKey;
 
-        this.loadToStorage();
+        this.#loadToStorage();
     }
 
-    loadToStorage() {
+    //    private method
+    #loadToStorage() {
         this.cartItem = JSON.parse(localStorage.getItem(this.localStorageKey));
         if (!this.cartItem) {
             this.cartItem = [
@@ -84,6 +87,8 @@ class Cart {
 const cart = new Cart('cart-oop');
 const bussinesscart = new Cart('cart-bussiness');
 
+// can not change the private property
+// bussinesscart.#localStorageKey ='can-not-change';
 
 
 console.log(cart);
