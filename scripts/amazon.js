@@ -1,7 +1,6 @@
-import {cart,addToCart} from '../scripts/cart.js';
-import {saveToStorage} from '../scripts/cart.js';
-import {products} from '../data/products.js';
-import {formatMoney} from './utils/money.js';
+import {addToCart} from '../data/cart.js'
+import { products} from '../data/products.js';
+import {formatMoney} from '../scripts/utils/money.js';
 
 // const products = [{
 //     image : 'images/products/athletic-cotton-socks-6-pairs.jpg',
@@ -42,7 +41,7 @@ products.forEach((product) => {
 
           <div class="product-rating-container">
             <img class="product-rating-stars"
-              src="images/ratings/rating-${product.rating.stars * 10}.png">
+              src="${product.getStarsUrl()}">
             <div class="product-rating-count link-primary">
               ${product.rating.number}
             </div>
@@ -85,7 +84,7 @@ document.querySelectorAll('.js-add-cart')
     .forEach((button) => {
         button.addEventListener('click', () => {
             const productId = button.dataset.productId;
-            addToCart (productId);
+            addToCart(productId);
             let cartquantity = 0;
             cart.forEach((element) => {
                 cartquantity += element.number;
@@ -94,5 +93,4 @@ document.querySelectorAll('.js-add-cart')
             console.log(cartquantity);
         });
     });
-
 
