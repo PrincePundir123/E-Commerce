@@ -45,6 +45,31 @@ class Clothing extends Products{
     return `<a href="${this.sizeChartLink}" target="_blank" >size cart</a>`
   }
 };
+
+const date = new Date;
+console.log(date);
+console.log(date.toLocaleTimeString());
+
+// const obj1 = {
+//   a : 3,
+//   b : this.a
+// }
+// console.log(obj1.b);
+
+// function lofThis(){
+//   console.log(this);
+// }
+// lofThis();
+// lofThis.call('hello');
+
+// const obj1= {
+//   hello:() =>{
+//     console.log(this);
+//   }
+// }
+
+// console.log(obj1.hello());
+
 // const product1 = new Products({
 //     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
 //     image: "images/products/athletic-cotton-socks-6-pairs.jpg",
