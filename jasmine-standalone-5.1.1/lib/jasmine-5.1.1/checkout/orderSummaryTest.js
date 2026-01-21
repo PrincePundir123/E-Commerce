@@ -1,7 +1,13 @@
 import { loadToStorage,cart } from "../../../../scripts/cart.js";
 import { renderOrder } from "../../../../scripts/checkout/ordersummary.js";
+import { loadProducts } from "../../../../data/products.js";
 describe('test suite: renderOrder summary',()=>{
     it('displays the cart', () =>{
+        beforeALl((done) =>{
+            loadProducts(()=>{
+                done();
+            });
+        });
         document.querySelector('.js-test-container').innerHTML =`
        <div class ="js-html-insert"></div>
        <div class ="js-payment"></div>
