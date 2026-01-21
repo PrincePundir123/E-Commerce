@@ -1,7 +1,8 @@
 import {addToCart, cart} from '../data/cart.js'
-import { products} from '../data/products.js';
+import { products,loadProducts} from '../data/products.js';
 import {formatMoney} from '../scripts/utils/money.js';
 
+loadProducts(renderProductsGrid);
 // const products = [{
 //     image : 'images/products/athletic-cotton-socks-6-pairs.jpg',
 //     productname : 'Black and Gray Athletic Cotton Socks - 6 Pairs',
@@ -27,6 +28,7 @@ import {formatMoney} from '../scripts/utils/money.js';
 //    },
 //    priceCent :799
 // }];
+function renderProductsGrid(){
 let producthtml = '';
 products.forEach((product) => {
     producthtml = producthtml + ` <div class="product-container">
@@ -78,6 +80,7 @@ products.forEach((product) => {
           </button>
         </div>`;
 });
+
 document.querySelector('.js-grid-html').innerHTML = producthtml;
 
 document.querySelectorAll('.js-add-cart')
@@ -93,4 +96,4 @@ document.querySelectorAll('.js-add-cart')
             console.log(cartquantity);
         });
     });
-
+}
