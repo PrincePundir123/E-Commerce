@@ -46,9 +46,9 @@ class Clothing extends Products{
   }
 };
 
-const date = new Date;
-console.log(date);
-console.log(date.toLocaleTimeString());
+// const date = new Date;
+// console.log(date);
+// console.log(date.toLocaleTimeString());
 
 // const obj1 = {
 //   a : 3,
