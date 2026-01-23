@@ -584,17 +584,18 @@ export function  loadProductsFetch(){
 
 
 // uses a callback to get ad  request 
-// export function loadProducts(fun){
-//   const xhr = new XMLHttpRequest();
-//   xhr.addEventListener('load' ,() =>{
-//     products =JSON.parse(xhr.response).map((productDetail) =>{
-//    if( productDetail.type==="clothing"){
-//     return new Clothing(productDetail);
-//    }
-//     return new Products(productDetail);
-//  });
-//  fun();
-//   });
-//   xhr.open('GET' ,'https://supersimplebackend.dev/products');
-//   xhr.send();
-// }
+
+export function loadProducts(fun){
+  const xhr = new XMLHttpRequest();
+  xhr.addEventListener('load' ,() =>{
+    products =JSON.parse(xhr.response).map((productDetail) =>{
+   if( productDetail.type==="clothing"){
+    return new Clothing(productDetail);
+   }
+    return new Products(productDetail);
+ });
+ fun();
+  });
+  xhr.open('GET' ,'https://supersimplebackend.dev/products');
+  xhr.send();
+}
